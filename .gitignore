@@ -1,0 +1,42 @@
+# Carpetas generadas por Unity (Ignorar siempre)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Ll]ogs/
+/[Mm]emoryCaptures/
+/[Uu]ser[Ss]ettings/
+
+# Archivos de solución y proyectos autogenerados de Visual Studio / C#
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Metadatos generados por Unity para archivos ignorados
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+
+# Archivos de reportes de cuelgues
+sysinfo.txt
+
+# Compilaciones (Builds) que puedas generar localmente
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.exe
