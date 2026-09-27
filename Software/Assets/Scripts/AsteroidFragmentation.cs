@@ -28,16 +28,17 @@ public class AsteroidFragmentation : MonoBehaviour
 
     public void Shatter (Vector3 bulletDirection)
     {
-        Vector3 incomingDir = bulletDirection.normalized;
+        Vector3 dir = this.moveDirection;
         for (int i = 0; i < numberOfFragments; i++)
         {
             float angleOffset = (i == 0) ? 45f : -45f;
-            Vector3 fragmentDirection = Quaternion.Euler(0, 0, angleOffset) * incomingDir;
+            Vector3 fragmentDirection = Quaternion.Euler(0, 0, angleOffset) * dir;
             GameObject fragment = Instantiate(fragmentPrefab, transform.position, Quaternion.identity);
-            Rigidbody rb = fragment.GetComponent<Rigidbody>();
-            if (rb != null)
+            FragmentMovement fragMove = fragment.GetComponent<FragmentMovement>();
+        
+            if (fragMove != null)
             {
-                rb.AddForce(fragmentDirection * explosionForce);
+                fragMove.SetDirection(fragmentDirection);
             }
         }
         Destroy(gameObject);
